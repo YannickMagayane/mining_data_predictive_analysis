@@ -1,7 +1,7 @@
 # ⛏️ RAPPORT STRATÉGIQUE COMPLET – Analyse Avancée & Prévisions Minières (RDC)
 
 **✨ Auteur : Yannick Magayane**  
-*👨‍💻 Full Stack Developer (Python, Django, Vue.js, HTMX, CSS, JavaScript) • 📊 Data Analyste • 💼 Consultant BI*  
+*👨‍💻 Full Stack Developer (Python, Django, Vue.js, HTMX, CSS, JavaScript) • 📊 Data Scientist • 💼 Consultant BI*  
 📧 yannickmagayane@gmail.com | 📱 +243979068311 | 🐙 [GitHub](https://github.com/YannickMagayane)
 
 **📅 Date** : 11 décembre 2025  
@@ -458,7 +458,7 @@ rapport_final_complet.aux          ← Auxiliary LaTeX file
 - 📧 yannickmagayane@gmail.com
 - 📱 +243979068311
 - 💼 👨‍💻 Full Stack Developer (Python, Django, Vue.js, HTMX, CSS, JavaScript)
-- 📊 Data Analyst • BI Consultant
+- 📊 Data Scientist • BI Consultant
 
 ---
 
