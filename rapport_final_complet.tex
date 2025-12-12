@@ -1,0 +1,1013 @@
+\documentclass[12pt,a4paper]{article}
+
+% ============================================================================
+% PACKAGES ET CONFIGURATION
+% ============================================================================
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{lastpage}
+\usepackage{soul}
+\usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage{paracol}
+
+% ============================================================================
+% COULEURS
+% ============================================================================
+\definecolor{darkblue}{HTML}{0F3A7D}
+\definecolor{lightblue}{HTML}{4DA8FF}
+\definecolor{darkgray}{HTML}{0A0A0A}
+\definecolor{orange}{HTML}{FFAA00}
+
+% ============================================================================
+% GÉOMÉTRIE
+% ============================================================================
+\geometry{
+    top=1cm,
+    bottom=1cm,
+    left=1.2cm,
+    right=1.2cm,
+    headheight=0.5cm,
+    headsep=0.2cm
+}
+
+% ============================================================================
+% STYLES
+% ============================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\color{darkblue}\tiny Page \thepage\ sur \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+\renewcommand{\headrule}{\color{lightblue}\hrule}
+\renewcommand{\footrule}{\color{lightblue}\hrule}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=lightblue,
+    filecolor=darkblue
+}
+
+% ============================================================================
+% COMMANDES PERSONNALISÉES
+% ============================================================================
+\newcommand{\chartwidth}{18cm}
+\newcommand{\chartheight}{9cm}
+
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+
+% ============================================================================
+% PAGE 1: PAGE DE GARDE COMPACTE
+% ============================================================================
+\thispagestyle{empty}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \fill[color=white] (0,0) rectangle (\paperwidth,\paperheight);
+    \fill[color=darkblue,opacity=0.05] (0,0) rectangle (\paperwidth,\paperheight);
+\end{tikzpicture}
+
+\vspace*{0.3cm}
+
+\begin{center}
+    {\color{darkblue}\textbf{\Large RAPPORT ANALYTIQUE \& PREDICTIF}}\\[0.1cm]
+    {\color{lightblue}\tiny Donnees 100\% Fictives --- Analyse Strategique Complete}
+\end{center}
+
+\vspace{0.4cm}
+
+\begin{center}
+    {\color{darkgray}\fontsize{22}{26}\selectfont\textbf{SECTEUR MINIER}}\\[0.15cm]
+    {\color{darkblue}\fontsize{18}{22}\selectfont\textbf{REPUBLIQUE DEMOCRATIQUE DU CONGO}}
+\end{center}
+
+\vspace{0.4cm}
+
+\begin{center}
+    {\color{lightblue}\Large\textbf{--- * ---}}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{center}
+    {\color{lightblue}\normalsize\textbf{Transformation Operationnelle 2024-2030}}\\[0.1cm]
+    {\color{darkblue}\tiny Vision Holistique: Production - Geologie - RH - IT - Environnement}
+\end{center}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \fbox{\begin{minipage}{15.5cm}
+        \centering
+        {\large\textbf{RESULTATS CLES PROJETES}}\\[0.3cm]
+        {\small\textbf{
+            28 Graphiques | 12 Tableaux | 100+ Recommandations IA
+        }}\\[0.2cm]
+        {\small\textbf{\color{lightblue}
+            ROI: 589\% | Production: +59\% | Emplois: +7,350
+        }}
+    \end{minipage}}
+\end{center}
+
+\vspace{0.4cm}
+
+\begin{center}
+    {\color{lightblue}\textbf{\normalsize ANALYSE ET PRODUCTION}}\\[0.15cm]
+    {\color{darkgray}\Large\textbf{Yannick Magayane}}\\[0.2cm]
+    {\color{darkblue}\tiny
+        Developpeur Full Stack - Data Scientist - Mentor Academique\\
+        Python - Django - Vue.js - HTMX - Data Analysis
+    }
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{center}
+    \fbox{\tiny\textcolor{orange}{\textbf{RAPPORT BASE SUR DES DONNEES 100\% FICTIVES}}}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{center}
+    {\tiny
+        Email: \textcolor{darkblue}{yannickmagayaneyannick@gmail.com}\\
+        Tel: \textcolor{darkblue}{+243 979 068 311} | GitHub: \textcolor{darkblue}{https://github.com/YannickMagayane}\\
+        {\color{lightblue}12 Decembre 2025}
+    }
+\end{center}
+
+\newpage
+
+% ============================================================================
+% PAGE 2: TABLE DES MATIÈRES
+% ============================================================================
+\thispagestyle{plain}
+
+\begin{center}
+    {\color{darkblue}\Large\textbf{TABLE DES MATIERES}}
+\end{center}
+
+\vspace{0.4cm}
+
+{\footnotesize
+\begin{tabularx}{\textwidth}{|l|X|r|}
+    \hline
+    \rowcolor{darkblue}
+    \color{white}\textbf{SEC} & \color{white}\textbf{TITRE} & \color{white}\textbf{P} \\
+    \hline
+    1-3 & Recommandations Strategiques & 3-5 \\
+    \hline
+    4-6 & Previsions 2024-2030 & 6-8 \\
+    \hline
+    7-8 & Geologie \& Exploration & 9-10 \\
+    \hline
+    9-10 & Logistique \& Donnees & 11-12 \\
+    \hline
+    11-12 & Production \& Capacites & 13-14 \\
+    \hline
+    13-14 & Ressources Humaines & 15-16 \\
+    \hline
+    15-16 & Finances \& Securite & 17-18 \\
+    \hline
+    17-20 & Environnement \& Maintenance & 19-22 \\
+    \hline
+    21-25 & IT \& Direction & 23-27 \\
+    \hline
+    26-28 & Synthese Finale & 28-30 \\
+    \hline
+    CONCLUSION & Vision 2030 & 31 \\
+    \hline
+\end{tabularx}
+}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 1: Synthese Finale
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 1. Synthese Finale}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Vue d'ensemble intégrale de tous les domaines stratégiques avec métriques clés quantifiées, indicateurs de performance opérationnelle, projections financières fiduciaires et recommandations prioritaires hiérarchisées. Cette synthèse agrège 28 analyses détaillées en une matrice de décision executive permettant steering stratégique optimisé, allocation ressources dynamique et priorisation initiatives intelligente. Couvre production minière, géologie exploration, IT transformation, RH développement, finances planification, environnement durabilité, sécurité zéro-accident. Méthodologie: analyse multicritère intégrant données historiques 5 ans, benchmarking industrie global, modèles prédictifs probabilistes, simulation scenarios stress-testing. Livrables: 28 graphiques analytiques, 12 tableaux données, matrice risques, roadmap implémentation, KPIs pilotage.
+&
+\small
+Integrated overview of all strategic domains with quantified key metrics, operational performance indicators, fiduciary financial projections and hierarchically prioritized recommendations. This synthesis aggregates 28 detailed analyses into executive decision matrix enabling optimized strategic steering, dynamic resource allocation and intelligent initiative prioritization. Covers mining production, exploration geology, IT transformation, HR development, finance planning, environment sustainability, zero-accident safety. Methodology: multi-criteria analysis integrating 5-year historical data, global industry benchmarking, probabilistic predictive models, stress-testing scenario simulation. Deliverables: 28 analytical charts, 12 data tables, risk matrix, implementation roadmap, piloting KPIs.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/00_SYNTHESE_FINALE.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 2: Recommandations par Domaine
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 2. Recommandations par Domaine}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Tableau strategique recapitulant toutes les recommandations par domaine operationnel avec matrice prioritisation intelligente. 8 domaines clefs: Securite (5 actions critiques), Production (4 optimisations majeurs), Geologie (3 initiatives exploration), IT (17 actions transformation numerique), RH (création 7,350 emplois), Environnement (reduction CO2 46\%), Logistique (savings USD 18M/an), Direction (governance + KPIs). 5 niveaux de priorite: critique (30j), haute (90j), moyenne (180j), basse (360j), informative (opportune). Impact total: USD 245M investissements, ROI 589\% cumulative 2030. Chaque recommandation inclut budget, timeline, propriétaire exécution, success criteria mesurables. Processus validation: C-suite approval, board oversight, stakeholder consultation, community engagement pour décisions critiques socio-environnementales.
+&
+\small
+Strategic matrix synthesizing all recommendations by operational domain with intelligent prioritization framework. 8 key domains: Safety (5 critical actions), Production (4 major optimizations), Geology (3 exploration initiatives), IT (17 digital transformation actions), HR (7,350 job creation), Environment (46\% CO2 reduction), Logistics (USD 18M/year savings), Leadership (governance + KPIs). 5 priority levels: critical (30-day), high (90-day), medium (180-day), low (360-day), informational (opportunistic). Total impact: USD 245M investment, 589\% cumulative ROI by 2030. Each recommendation includes budget allocation, execution timeline, accountability owner, measurable success criteria with KPI tracking. Validation process: C-suite approval, board oversight, stakeholder consultation, community engagement for critical socio-environmental decisions. Implementation methodology: Agile sprints, biweekly reviews, adaptive planning with quarterly course corrections.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/01_recommandations_domaines.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 3: Matrice Impact / Urgence
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 3. Matrice Impact / Urgence}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Positionnement bidimensionnel stratégique de 9 domaines operationnels selon impact potentiel et urgence execution immediate. Sécurité positionnée zone CRITIQUE (action immédiate 30 jours maximum, impact strategic 100/100, risque reputationnel sevère). Production/Géologie/IT en zone IMPORTANTE (execution 6 mois planifiée, impact 85-95/100, dépendances critiques multiples). Environnement/RH zone OPPORTUNE (execution échelonnée 12-18 mois, impact 60-75/100, dépendances minimales). Matrice 2D: axe Y = impact operationnel+financier+reputationnel, axe X = urgence temporelle + risque. Framework permet priorisation intelligente allocation ressources executives, allocation budget sequentiel, scheduling non-conflictuel. Analyse RACI: propriétaires domaine, comité supervision, stakeholders consultes. Révision tri-mensuelle selon KPIs réalisés, changements marche externe, opportunités emergence.
+&
+\small
+Two-dimensional strategic positioning of 9 operational domains across operational impact potential and execution urgency timeline. Safety positioned CRITICAL zone (immediate action 30-day maximum, maximum strategic impact 100/100, severe reputational risk exposure). Production/Geology/IT in IMPORTANT zone (6-month planned execution, 85-95/100 impact, multiple critical dependencies). Environment/HR in OPPORTUNISTIC zone (staggered 12-18 month execution, 60-75/100 impact, minimal dependencies). 2D matrix: Y-axis = operational+financial+reputational impact, X-axis = execution urgency + timeline risk. Framework enables intelligent prioritization of executive resources, sequential budget allocation, conflict-free scheduling across domains. RACI analysis: domain owners, supervision committee, engaged stakeholders, board oversight. Tri-monthly revision based on realized KPIs, external market changes, emerging opportunities, strategic pivots. Resource optimization: concurrent execution low-urgency items, sequential critical path with buffer time, risk mitigation strategies for impact zones.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/02_matrice_priorite.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 4: Timeline Exécution
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 4. Timeline Execution (Gantt)}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Diagramme Gantt détaillé orchestrant 12 initiatives stratégiques interdépendantes 2024-2030 avec buffers temporels, jalons critiques, synchronisation ressources. Actions critiques 2024-2025: audit sécurité (3 mois, Q1-Q2 2025), certification géologie NI-43-101 (4 mois, Q2-Q3 2025), infrastructure IT datacenter (6 mois Q1-Q2 2025), transformation ERP SAP (18 mois Q2 2025-Q3 2026). Exploration géologique intensive 3 ans parallèle (2024-2027), forages 45,000m, sismique 3D 2,500 km². Production phase 1 (2025-2027): USD 18.5M capex metallurgique/capacités. RH crescendo 2025-2030: recrutement 2,100 (2025), 1,500 (2026), formation 2,000 techniciens. Dépendances critiques: géologie finalise => production optimise => IT supporte mesure. Slack buffer 15\% timeline pour risques. Jalons: Q1 audit ✓, Q3 certif ✓, Q4 SAP UAT, 2026 production +15\%, 2028 carbon-neutral.
+&
+\small
+Detailed Gantt diagram orchestrating 12 interdependent strategic initiatives 2024-2030 with temporal buffers, critical milestones, resource synchronization and bottleneck avoidance. Critical actions 2024-2025: safety audit (3 months, Q1-Q2 2025 completion), NI-43-101 geology certification (4 months, Q2-Q3 2025), datacenter IT infrastructure (6 months Q1-Q2 2025), SAP ERP transformation (18 months Q2 2025-Q3 2026 full operationalization). Parallel intensive geological exploration 3-year trajectory (2024-2027): 45,000 meters drilling, 2,500 km² 3D seismic acquisition with interpretation. Production Phase 1 (2025-2027): USD 18.5M capex allocation metallurgical optimization and capacity expansion. HR crescendo 2025-2030: recruitment campaigns 2,100 (2025), 1,500 (2026), 1,200 (2027), training 2,000 technicians annual upskilling. Critical path dependencies: geology finalized => production optimization enabled => IT systems measure/control. 15-percent timeline slack buffer for risk contingency. Major milestones: Q1 audit completion, Q3 certifications, Q4 SAP user acceptance testing, 2026 production +15\% vs baseline, 2028 carbon-neutral achievement, 2030 vision realization.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/03_timeline_execution.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 5: Prévisions 5 Ans
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 5. Previsions 5 Ans Complet}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Projections financières-opérationnelles détaillées 2025-2030 basées sur modèles prédictifs probabilistes et simulation Monte-Carlo 10,000 iterations. Production baseline 45.2 Mt (2024) croissance exponentielle vers 72 Mt (2030), soit +59\% CAGR 8.7\% annuel (vs industrie 3.5\%). Revenus progression USD 890M USD 1,410M (+58\%), premium pricing 2\% commodité qualité supérieure. Emploi création 7,350 postes croissance 12,450 vers 19,800, distribution: 65\% opérationnel minier, 20\% support services, 10\% administratif, 5\% management. Profitabilité amélioration significative 18\% vers 38\% (+20 points pourcentage), drivers: tonnage supérieur (-25\% coût unitaire), teneur améliorée (+3.2\% métal fin), taux recoup +4\%, efficience minière +12\%. ROI cumulative 2030 = 589\%, breakeven 3.2 ans investment 245M USD. EBITDA progression: 175M (2024) USD USD 530M (2030), cash flow libre 85M USD 310M annuel 2030. Sensibilité: production ±10\% = ±15\% EBITDA, prix ±15\% = ±22\% profitabilité.
+&
+\small
+Detailed financial-operational forecasts 2025-2030 based on probabilistic predictive models and Monte-Carlo simulation 10,000 iterations for confidence intervals. Production baseline 45.2 Mt (2024) exponential growth trajectory to 72 Mt (2030), representing +59\% absolute growth with 8.7\% CAGR annually (vs industry benchmark 3.5\%). Revenue progression USD 890M to USD 1,410M (+58\% growth), enabled by premium positioning 2\% commodity pricing premium quality-grade superior concentrate. Employment creation 7,350 net new positions, growth 12,450 to 19,800 total headcount, distribution: 65\% operational mining field, 20\% support services, 10\% administrative functions, 5\% management tier. Profitability improvement trajectory 18\% operating margin (2024) to 38\% (2030), representing +20 percentage point expansion driven by: tonnage scaling (-25\% unit cost), grade enhancement (+3.2\% recoverable metal), recovery optimization +4\%, mining efficiency +12\%. Return on investment cumulative 2030: 589\%, breakeven timeline 3.2 years for USD 245M investment allocation. EBITDA progression: USD 175M (2024) to USD 530M (2030), free cash flow USD 85M to USD 310M annual 2030 terminal year. Sensitivity analysis: production ±10\% = ±15\% EBITDA impact, price ±15\% = ±22\% profitability sensitivity.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/04_previsions_5ans_complet.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 6: Index Croissance Comparatif
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 6. Index Croissance Comparatif}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Analyse scenario tri-directionnelle avec indexation croissance comparative versus baseline 2024. Scenario pessimiste (+28\% production 2030): assume 40\% initiatives échouent, budget reductions 15\%, délais 6 mois retard, turnover élevé 18\%, impacts sécurité +2 TRIFR. Scenario central (+59\% production): assume 80\% exécution planifiée, 10\% contingencies utilisées, timeline nominal. Scenario optimiste (+148\% production): assume 95\%+ execution excellence, opportunité captures additionnelles (prix +8\%, partenariat strategique mining-tech), innovation operationnelle acceleration. Gap scenarios explose dramatiquement 0 points pourcentage (2024, identical baseline) vers 120 points pourcentage (2030), demonstrates extreme sensitivity execution quality impact business performance. CRITIQUE: 1\% improvement execution = 2\% production gain additionnel, 3.5\% profit impact, USD 50M EBITDA value creation annuel. Probabilités: pessimistic 15\% likelihood, central 65\%, optimistic 20\%. Drivers variabilité: géologie (reserve confirmation), opérationnel (equipment availability, metallurgical recovery), marché (prices, demand), talent (retention experienced engineers), external (regulatory, security incidents).
+&
+\small
+Three-scenario growth index analysis with comparative indexing versus 2024 baseline performance. Pessimistic scenario (+28\% production 2030): assumes 40\% initiative failures, 15\% budget reduction constraints, 6-month timeline delays, elevated 18\% turnover attrition, safety impacts +2 TRIFR deterioration. Central scenario (+59\% production): assumes 80\% planned execution achievement, 10\% contingency reserves utilized, nominal timeline adherence, expected performance realization. Optimistic scenario (+148\% production): assumes 95\%+ execution excellence, additional opportunity captures (commodity pricing +8\% premium, strategic mining-tech partnerships), accelerated operational innovation cycles. Scenario gap divergence exhibits extreme sensitivity to execution quality. Gap explodes from 0 percentage points (2024, identical baseline for all scenarios) to 120 percentage points (2030), vividly demonstrating execution quality impact. CRITICAL elasticity: 1\% execution improvement = 2\% production gain, 3.5\% profit impact, USD 50M EBITDA annual value creation. Probability distributions: pessimistic 15\% likelihood assessment, central 65\% modal scenario, optimistic 20\% upside case. Variability drivers: geology (reserve confirmation accuracy), operational (equipment availability rates, metallurgical recovery algorithms), market (commodity prices, demand volatility), talent (experienced engineer retention), external (regulatory changes, security incidents).
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/05_index_croissance_comparatif.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 7: Revenue & ROI Forecast
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 7. Revenue \& ROI Forecast}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Forecast revenus annuels avec profil ROI cumulatif 7 ans horizon 2024-2030. Revenus baseline USD 890M (2024) trajectory ascendante USD 1,410M (2030), croissance 58\% absolute avec CAGR 8.2\% annuel, reflète volume production (+59\%) et premium pricing (+2\% métal pur qualité supérieure). Investment capex allocation: 2024-2025 (USD 85M exploration IT infrastructure), 2025-2026 (USD 95M production metallurgique), 2026-2027 (USD 45M optimisation), 2027-2030 (USD 20M maintenance sustainment). ROI profile: négatif 2024-2025 (investment phase, -USD 85M cumul), breakeven 2027 (cumulative capital recovery), puis expansion exponentielle. ROI cumulatif: 185\% (fin 2024), 245\% (2025), 325\% (2026), 425\% (2027), 485\% (2028), 545\% (2029), 589\% (2030). Simple payback periode: 3.2 ans, profitability index 2.4x. NPV discount 8\%: USD 780M présent value. IRR internal 34\% annuel versus cost capital 8\%, spread 26\% indicates attractive investment profile.
+&
+\small
+Annual revenue forecast trajectory with cumulative ROI profile over 7-year 2024-2030 horizon. Revenue baseline USD 890M (2024) ascending trajectory to USD 1,410M (2030), representing 58\% absolute growth with 8.2\% CAGR annually, reflecting production volume expansion (+59\%) and quality premium pricing (+2\% pure metal superior concentrate). Capital expenditure allocation: 2024-2025 (USD 85M exploration IT datacenter infrastructure), 2025-2026 (USD 95M production metallurgical optimization), 2026-2027 (USD 45M operational efficiency), 2027-2030 (USD 20M maintenance sustainment capex). ROI timeline profile: negative 2024-2025 investment phase (-USD 85M cumulative), breakeven achievement 2027 (cumulative capital recovery inflection), subsequent exponential expansion phase. Cumulative ROI progression: 185\% end-2024, 245\% (2025), 325\% (2026), 425\% (2027), 485\% (2028), 545\% (2029), terminal 589\% (2030). Simple payback period: 3.2-year recovery timeline, profitability index 2.4x (USD 2.40 value per USD 1 invested). Net present value 8\% discount rate: USD 780M present value. Internal rate return: 34\% annualized versus 8\% cost of capital, representing 26\% spread indicates highly attractive investment profile with risk-adjusted returns.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/06_revenue_roi_forecast.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 8: Réserves, Teneur, Profondeur
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 8. Reserves, Teneur, Profondeur}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Characterisation gisements geologiques avec evolution reserves proven+probable 2024-2030. Reserves growth: 245 Mt (2024) progression 385 Mt (2030), soit +57\% absolute increase via exploration drilling 45,000m forage curage mineralisé. Teneur Cu metal content amélioration: 0.95\% (2024) vers 1.15\% (2030), +21\% enrich reflète selective mining refined exploitation, metallurgical optimization geochemistry. Profondeur mining progressif: 450m (2024) vers 600m (2030), +33\% expansion vers mineralization profonde, justifie underground mining transition phased 2027-2030. Coût unitaire baisse dramatique -49\% (USD 2.45/tonne ore vers USD 1.25/tonne ore), drivers: volumetric economies scale, grade enhancement recover efficiency, operational learning curve effect. Taux recuperation optimisation: 92\% (2024) vers 96\% (2030), +4pp improvement, achieved via: metallurgical recovery circuit optimization, comminution efficiency, flotation chemistry refinement, tail management. Paramétrés reserve confidence: proven 45\% (2024) vers 55\% (2030), probable 40\% vers 30\%, inferred 15\% vers 15\%. Implication: plus importants tonnage reserves, plus riches teneur métal, plus profond mining access, néanmoins plus efficaces operational cost mining minimal.
+&
+\small
+Geological deposit characterization with evolution proven+probable reserves 2024-2030 timeline. Reserve growth: 245 Mt (2024) progression trajectory 385 Mt (2030), representing +57\% absolute increase via exploration drilling campaign 45,000 meters drilling curage mineralized zones identification. Copper metal grade content enhancement: 0.95\% (2024) advancement 1.15\% (2030), +21\% enrichment reflect selective mining refined exploitation practices, metallurgical optimization geochemical processing. Mining depth progression escalation: 450 meters (2024) toward 600 meters (2030), +33\% expansion into deeper mineralization zones, justifies underground mining transition phased implementation 2027-2030. Unit ore cost reduction dramatic -49\% decline (USD 2.45/tonne ore descending USD 1.25/tonne ore production), key drivers: volumetric economies scale benefit, grade enhancement recovery efficiency, operational learning curve maturation effect. Recovery rate optimization trajectory: 92\% (2024) advancement 96\% (2030), +4 percentage point improvement achievement via: metallurgical recovery circuit optimization, comminution efficiency enhancement, flotation chemistry refinement, tailings management excellence. Reserve confidence parameters: proven 45\% (2024) advancing 55\% (2030), probable 40\% declining 30\%, inferred stable 15\%. Implication: larger tonnage reserves discovered, higher metal grade content per tonne, deeper mining access requirements, nonetheless achieved through improved operational efficiency cost mining reduction.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/07_geologie_reserves_teneur.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 9: Timeline Exploration
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 9. Timeline Exploration}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Exploration programme budgétaire détaillé 2024-2030 (USD 50.3M allocation totale). Forages metallifères: USD 24.5M budget, 45,000 mètres lineaire curage mineralisé deep targets, RC drilling 18,000m (+8,000m diamond core), contractors MWH TSX certified standards. Sismique 3D acquisition: USD 8.2M, 2,500 kilomètres ligne sismique 3D reflection processing, interpretation geophone networks, geophones dynamite charges synchronized multichannel. Faisabilite prefeasibility etudes: USD 5.8M, engineering coûts mining, metallurgical test metallurgique processing, environmental baseline studies, mine design optimization CAD 3D. Geologic interpretation: USD 3.5M, structural analysis fault systems, mineralization vector geochemistry modeling, resource classification NI-43-101 canadian standards, geological modelling Leapfrog dynamic. Infrastructure establishment: USD 8.3M, drilling camp bases established, laboratory assay setup facilities, logistics transport, equipment mobilization preparation. Livrables exploratoires majeurs: 3 rapports NI-43-101 certified (2025, 2027, 2030), 5 rapports test metallurgique processus flow sheet, resource statements confidence updates, feasibility studies 2 projects prioritized. Timeline phased: 2024-2025 drilling intensif, 2025-2026 sismique acquisition interpretation, 2026-2027 faisabilite studies, 2027-2030 optimisation geology.
+&
+\small
+Exploration programme budget allocation detailed 2024-2030 (USD 50.3M total expenditure). Metalliferous drilling: USD 24.5M budget allocation, 45,000 meters linear drilling deep targets mineralization curage, RC reverse circulation 18,000m + 8,000m diamond core premium sampling, contractors MWH TSX certified international standards. Three-dimensional seismic acquisition: USD 8.2M investment, 2,500 kilometers seismic line 3D reflection processing high-definition, interpretation geophone networks charged dynamite synchronized multichannel recording arrays. Prefeasibility studies engineering: USD 5.8M allocation, mine costing optimization, metallurgical test processing flowsheet development, environmental baseline characterization studies, CAD 3D mine design modeling. Geological interpretation services: USD 3.5M, structural fault system analysis, mineralization vector geochemical modeling machine-learning, NI-43-101 resource classification canadian compliance standards, Leapfrog 3D dynamic modeling software integration. Infrastructure establishment: USD 8.3M capital, drilling camp bases established remote sites, assay laboratory analytical facilities setup, logistics supply chain transport, equipment heavy drill mobilization preparation. Major exploration deliverables: 3 NI-43-101 certified resource reports (2025, 2027, 2030 schedule), 5 metallurgical test reports process flow sheet optimization, resource statement confidence updates quarterly, feasibility studies 2 priority projects. Timeline phased schedule: 2024-2025 drilling intensive campaign, 2025-2026 seismic acquisition interpretation, 2026-2027 feasibility studies engineering, 2027-2030 advanced geology optimization.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/08_geologie_timeline_exploration.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 10: Optimisations Logistiques
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 10. Optimisations Logistiques}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Optimisation logistique integrale 7 mesures economie cumulatives USD 18M annuel. Gestion fournisseurs strategique: USD 4.5M savings, consolidation 150+ fournisseurs vers 35 preferred partner tier-1, long-term contracts volume discounts 8-12\%, supplier development programmes quality improvement just-in-time inventory 30\% stockage reduction. Optimisation transport/freight: USD 3.2M annual, route network routing software AI optimization, vessel consolidation full container load FCL compliance, rail freight modal shift vs truck (60\% cost reduction longue distance), logistics partner reverse auctions competitive bidding quarterly. Sourcing/procurement intelligence: USD 2.8M, global supplier network expansion LCC Philippines Vietnam Indonesia sourcing, materials engineering value engineering alternatives, e-procurement platform RFQ automation, mavens supplier development technical assistance. Warehousing distribution optimization: USD 2.1M, 3PL regional hub consolidation 8 centres vers 4, automated conveyor WMS warehouse management software integration, cross-docking throughput acceleration, real-time tracking RFID barcode scan. Energy optimization logistics: USD 2.0M, equipment fuel efficiency replacement diesel hybrid, renewable energy solar solar panels warehouse facilities, carbon trading offset CER certified emission reductions sale. Reverse logistics services: USD 1.4M, scrap metal recycling precious metals recovery, equipment refurbishment remanufacturing, waste minimization lean six-sigma zero-landfill target. Implementation capex: USD 2.2M (2024), payback 18 mois simple, ROI 8\% reduction supply chain cost, NPV 5 ans USD 65M optimization savings cascade benefit.
+&
+\small
+Integrated logistics optimization 7 cumulative cost-saving measures USD 18M annual realization. Strategic supplier management: USD 4.5M savings target, consolidation 150+ diverse suppliers to 35 preferred partner tier-1 rankings, long-term framework contracts volume discounts 8-12\% negotiation, supplier development programmes quality improvement initiatives, just-in-time inventory methodology 30\% stockage reduction working capital liberation. Transportation freight optimization: USD 3.2M annual savings, route network AI-powered routing optimization software, vessel consolidation full container load FCL compliance, rail freight modal transportation shift truck alternative (60\% cost reduction long-distance corridors), 3PL partner reverse auction competitive bidding quarterly refresh. Sourcing procurement intelligence: USD 2.8M efficiency gain, global supplier network expansion low-cost country sourcing Philippines Vietnam Indonesia offshore, materials engineering value engineering specification alternatives, e-procurement platform RFQ automation engine, supplier development technical transfer training programs. Warehousing distribution optimization: USD 2.1M reduction, 3PL regional hub consolidation 8 centres consolidation to 4 optimal facilities, automated conveyor WMS warehouse management system integration, cross-docking throughput acceleration methodologies, real-time tracking RFID barcode scanning visibility. Logistics energy optimization: USD 2.0M benefit, equipment fuel efficiency vehicle replacement diesel hybrid electrification, renewable energy solar panels warehouse facilities photovoltaic, carbon credit trading offset CER certified emission reduction sale monetization. Reverse logistics management: USD 1.4M recovery, scrap precious metal recycling recovery extraction, equipment refurbishment remanufacturing second-life utilization, waste minimization lean six-sigma zero-landfill target achievement. Implementation capex requirement: USD 2.2M (2024), payback 18-month simple payback, ROI 8\% reduction supply chain cost baseline, 5-year NPV USD 65M optimization savings cascade compound benefit.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/09_logistique_optimisations.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 11: Qualité Données
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 11. Qualite Donnees}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Data quality audit enterprise complet 2024. Baseline: 6,052 anomalies identifiées dans dataset operationnel 12 mois historical: manquantes 38.6\% (2,341 enregistrements), doublons 27.8\% (1,683 enregistrements), formats incorrects 18.5\% (1,121 enregistrements), autres anomalies 15.1\% (907 enregistrements). Post-remediation: 68 anomalies résiduelles (99.1\% resolution rate), completion rate dataset 94.2\% vs 68\% baseline. Intervention coûts: USD 45K audit+remediation (outils, personnel consulting 400 hours). Impact business: fiabilité forecasts prédictifs +25\%, precision models ML +18\%, trust executive dashboards +40\%, decision quality +15\%. Data governance: MDM master data management implementation, stewardship policies, quality scorecards monthly monitoring. Training: 120 staff data literacy programmes, SQL queries optimization. Continuance: quarterly data quality reviews, anomaly detection automated alerts systems, remediation workflows SLA 72 hours resolution targets.
+&
+\small
+Enterprise data quality audit completion 2024. Baseline: 6,052 total anomalies identified operational dataset 12-month historical: missing 38.6\% (2,341 records), duplicates 27.8\% (1,683 records), format errors 18.5\% (1,121 records), other anomalies 15.1\% (907 records). Post-remediation outcome: 68 residual anomalies (99.1\% resolution achievement), dataset completion rate 94.2\% vs 68\% baseline improvement +26.2pp. Intervention costs: USD 45K audit+remediation (tools, consulting 400 personnel hours). Business impact: forecast reliability +25\%, predictive model precision +18\%, executive dashboard trustworthiness +40\%, decision quality improvement +15\%. Data governance framework: MDM master data management implementation, stewardship policies definition, quality scorecards monthly monitoring cadence. Staff enablement: 120 personnel data literacy training programs, SQL query optimization workshops. Continuance protocols: quarterly data quality reviews scheduled, automated anomaly detection alert systems real-time, remediation workflows SLA 72-hour resolution targets enforcement. Root cause analysis: ETL process failures 45\%, source system quality 35\%, manual data entry errors 20\%. Prevention: pipeline validation rules, duplicate detection algorithms, reference data standardization enforcement.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/10_logistique_data_cleaning.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 12: Production Analysis
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 12. Production Analysis}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Analyse production detaillée baseline et projections 2024-2030. Production baseline: 45.2 Mt ore annually (2024), crescendo projection +8.5\% annuel trajectory 72 Mt (2030). Drivers production croissance: improvement metallurgical recovery +12\% circuit optimization, capacity expansion +35\% fleet equipment mining additions, downtime reduction 78\% vers 95\% equipment availability rates, recovery optimization 92\% vers 96\% taux recoup. Cost structure evolution: COGS baseline USD 2.45/tonne ore evolution USD 1.25/tonne ore (2030), -49\% reduction economies scale. Capital investment program: Phase 1 metallurgical circuit USD 6.8M (2024-2025), Phase 1 capacity equipment USD 7.2M (2025-2026), downtime optimization USD 2.5M (2025-2027), yield enhancements USD 2.0M (2026-2027). Total capex phase 1: USD 18.5M avec ROI breakeven 3.1 ans. Revenue impact: production growth +59\% baseline multiplied premium pricing (+2\%) = +61\% revenue expansion USD 520M additional annual revenue 2030 scenario. Profit impact: improved margins 18\% vers 38\% (+20pp) multiplied higher revenue = USD 200M profit expansion. Bottleneck analysis: equipment maintenance critical path, ore supply continuity critical, concentrate logistics optimization important.
+&
+\small
+Detailed production analysis baseline and projections 2024-2030 timeline. Production baseline: 45.2 Mt ore annually (2024), crescendo projection +8.5\% annual growth trajectory 72 Mt (2030). Production growth drivers: metallurgical recovery improvement +12\% circuit optimization efficiency, mining capacity expansion +35\% equipment fleet additions, equipment downtime reduction 78\% advancing 95\% availability rates, recovery optimization 92\% advancing 96\% recuperation rates. Cost structure evolution dynamics: COGS baseline USD 2.45/tonne ore descending USD 1.25/tonne ore (2030), representing -49\% reduction achievement through economies scale, operational learning, technology deployment. Capital investment program sequencing: Phase 1 metallurgical circuit enhancement USD 6.8M (2024-2025), Phase 1 capacity mining equipment USD 7.2M (2025-2026), downtime elimination USD 2.5M (2025-2027), yield rate enhancements USD 2.0M (2026-2027). Total Phase 1 capex: USD 18.5M allocation with ROI breakeven timeline 3.1 years achievement. Revenue impact modeling: production growth +59\% baseline multiplied premium pricing premium (+2\%) = +61\% revenue expansion USD 520M additional annual revenue 2030 scenario visualization. Profit impact quantification: improved margins 18\% advancing 38\% (+20 percentage point spread) multiplied higher revenue generation = USD 200M profit expansion 2030 terminal year. Bottleneck analysis: equipment maintenance critical path dependency, ore supply continuity critical factor, concentrate logistics optimization important secondary.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/02_production_analysis.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 13: Recommandations Production
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 13. Recommandations Production}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Programme production intégré capex strategic 2024-2027 avec extensions 2028-2030. Phase 1 investissements: Metallurgical circuit optimization USD 6.8M (new flotation cells SAG mill replacement), Capacity mining equipment USD 7.2M (3 pelles excavators, 25 camions trucks, 5 foreuses drills), Downtime reduction maintenance USD 2.5M (predictive maintenance sensors, spare parts stocking), Rendement yield optimization USD 2.0M (process chemisty improvements, operator training). Phase 1 subtotal: USD 18.5M (2025-2027 execution), Phase 2 sustainment: USD 8.3M/annuel (2028-2030) equipment replacement, maintenance programs, technology updates. Financial projections: Revenue impact USD 520M additional annual 2030, Profit impact USD 200M net improvement, Cash flow positive 2027 onwards acceleration. ROI analysis: breakeven timeline 3.1 ans, profitability index 2.8x, NPV 10\% discount USD 450M. Risk mitigation: equipment supplier SLA penalties contractual, timeline buffer 12\% schedule contingency, alternate vendors secondary sourcing procurement. Execution governance: monthly production steering committee, weekly capex tracking, supplier performance KPIs monitored, quality gate approvals phased. Scaling strategy: phased implementation minimize disruption, parallel construction mine site planning, minimal productio downtime seasonal scheduling windows.
+&
+\small
+Integrated production capex program strategic 2024-2027 with extensions 2028-2030. Phase 1 capital investments: Metallurgical circuit optimization USD 6.8M (new flotation cells, SAG mill replacement primary grindin), Mining capacity equipment USD 7.2M (3 excavators, 25 trucks haulage, 5 drilling units), Downtime reduction maintenance programs USD 2.5M (predictive sensors IoT deployment, spare parts stocking efficiency), Yield rate optimization USD 2.0M (process chemistry improvements flotation, operator training programs enhanced). Phase 1 subtotal: USD 18.5M (2025-2027 execution period), Phase 2 sustainment capex: USD 8.3M/annual (2028-2030) equipment replacement cycles, maintenance program expansion, technology system updates. Financial outcome projections: Revenue impact USD 520M additional annual 2030 scenario, net Profit impact USD 200M improvement, Cash flow generation positive 2027 onwards acceleration. Return on investment analysis: breakeven timeline 3.1-year achievement, profitability index 2.8x multiplier, NPV 10\% discount rate USD 450M valuation. Risk mitigation strategies: equipment supplier SLA penalties contractual enforcement, timeline schedule buffer 12\% contingency allocation, alternate vendor secondary sourcing procurement agreements. Execution governance framework: monthly production steering committee oversight, weekly capex tracking dashboard, supplier performance KPIs monitored real-time, quality gate approvals phased gate reviews. Scaling operational strategy: phased implementation minimize production disruption risk, parallel construction mine site planning coordination, minimal production downtime seasonal scheduling windows optimization.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/03_recommandations_production.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 14: Ressources Humaines
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 14. Ressources Humaines}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Stratégie HR crescendo 2024-2030 création 7,350 postes nets. Distribution headcount: 12,450 baseline (2024) vers 19,800 (2030), breakdown: 65\% roles operationnels mining (12,870), 20\% support services (3,960), 10\% administratif (1,980), 5\% management tier (990). Recruitment timeline: 2025 (2,100 new hires 45\% internal promotion 55\% external recruitment), 2026 (1,500 hires), 2027 (1,200 hires), 2028-2030 (1,550 hires fill turnover attrition). Training programmes: 2,000 technicians formation program annually, supervisory development 500 managers trained, leadership academy 200 senior managers. Compensation philosophy: salary growth +8\% (2024-2025), +5\% (2025-2027), +3\% (2027-2030) = +15\% total cumulative. Remuneration baseline: USD 1,850/mois technician progression USD 2,180/mois (2030), middle management USD 4,200 vers USD 5,100, executives USD 12,000 vers USD 15,000. Benefits packages: health insurance 100\% employees, education scholarships USD 2M/annuel, housing assistance 30\% workforce, pensions 6\% company matching. Retention strategies: NPS score 52 (2024) target 78 (2030), turnover reduction 22\% vers 8\%, incentive programs safety bonuses, performance-based awards. Organizational culture: zero-accident safety champions, diversity equity inclusion 35\% women target 2030, community partnership programs engagement.
+&
+\small
+HR crescendo strategy 2024-2030 net job creation 7,350 positions. Headcount distribution growth: 12,450 baseline (2024) advancing 19,800 (2030), departmental breakdown: 65\% operational mining roles (12,870 positions), 20\% support services (3,960 staffing), 10\% administrative functions (1,980 personnel), 5\% management tier (990 leaders). Recruitment timeline sequencing: 2025 (2,100 new hires 45\% internal promotion 55\% external recruitment sourcing), 2026 (1,500 hires), 2027 (1,200 hires onboarding), 2028-2030 (1,550 hires replacement turnover attrition). Professional development programs: 2,000 technicians training curriculum annually conducted, supervisory leadership development 500 managers trained programs, executive academy 200 senior management tier. Compensation strategy: salary growth progression +8\% (2024-2025 period), +5\% (2025-2027 progression), +3\% (2027-2030 advancement) = +15\% total cumulative increase. Remuneration level trajectories: baseline technician USD 1,850/month advancing USD 2,180/month (2030), middle management USD 4,200 towards USD 5,100, executive tier USD 12,000 advancing USD 15,000. Employee benefits packages: health insurance 100\% workforce coverage, education scholarships USD 2M/annual investment, housing assistance 30\% workforce support, pension programs 6\% company matching contributions. Retention strategic initiatives: NPS employee satisfaction 52 (2024) target 78 (2030), turnover reduction trajectory 22\% advancing 8\%, incentive programs safety bonuses achievement, performance-based awards recognition. Organizational culture development: zero-accident safety champions culture, diversity equity inclusion women target 35\% 2030 achievement, community partnership programs local engagement.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/01_rh_analysis.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 15: Recommandations RH
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 15. Recommandations RH}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Programme HR tactical recommendations creation emploi 7,350 postes nettes phased 2025-2030. Phase 1 execution (2025): recruitment 2,100 new employees breakdown 45\% internal promotion advancement opportunities, 55\% external hiring external market search. Baseline salary technician: USD 1,850/monthly remuneration adjusted annually growth compensation. Formation intensive: 2,000 technicians training curriculum programme annually conducted, 500 supervisors supervisory development programmes, 200 managers leadership academy advanced. Augmentation salariale strategy: +8\% increase (2024-2025 competitive retention), +5\% (2025-2027 market alignment), +3\% (2027-2030 sustainability planning) = +15\% cumulative total wage growth. Retention initiatives: turnover reduction 22\% (baseline 2024) declining 8\% (target 2030), satisfaction NPS 52 advancing 78 employee engagement, bonus programs safety incentives USD 2.5M/annual, recognition awards USD 1.2M/annual celebration. Organizational development: career progression pathways defined roles, leadership pipeline developing talent, mentorship programs senior-junior pairing, diversity initiatives women 35\% 2030 target achievement. Employee experience: work-life balance flexible scheduling remote opportunities, wellness programs health mental-health support USD 1.5M/annual, community engagement volunteer programs, employee stock purchase plans equity participation. Implementation KPIs: headcount growth 7,350 persons, retention rate 92\%+ target, training hours 120/employee annually, safety performance near-zero incidents, engagement scores 78+ NPS achievement.
+&
+\small
+HR tactical programme recommendations net job creation 7,350 positions phased 2025-2030. Phase 1 execution (2025): recruitment campaign 2,100 new employees distribution 45\% internal promotion advancement opportunities, 55\% external hiring market sourcing recruitment. Technician baseline compensation: USD 1,850/monthly salary structure adjusted annual growth trajectory. Intensive training programming: 2,000 technicians technical training curriculum annually delivered, 500 supervisors supervisory development advancement programs, 200 managers leadership academy executive tier. Salary increase strategic trajectory: +8\% increase (2024-2025 competitive market retention), +5\% (2025-2027 industry alignment), +3\% (2027-2030 financial sustainability planning) = +15\% cumulative compound wage growth achievement. Retention strategic initiatives: turnover reduction trajectory 22\% (2024 baseline) declining 8\% (2030 target), satisfaction NPS score 52 advancing 78+ employee engagement improvement, bonus programs safety incentives USD 2.5M/annual allocation, recognition awards celebration USD 1.2M/annual investment. Organizational development focus: career progression pathways defined roles advancement, leadership pipeline development talent cultivation, mentorship programs senior-junior professional pairing, diversity initiatives women participation 35\% 2030 target achievement. Employee experience enhancement: work-life balance flexible scheduling options, wellness comprehensive programs health mental-health support USD 1.5M/annual, community engagement volunteer programs local participation, equity plans employee stock purchase participation opportunity. Implementation KPI targets: headcount growth 7,350 persons realized, retention rate 92\%+ achievement, training hours 120/employee annually delivered, safety performance near-zero incident target, engagement scores 78+ NPS positive realization.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/04_recommandations_rh.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 16: Finances & Budgets
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 16. Finances \& Budgets}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Plan financier strategique 7 années (USD 245M total capex allocation). Distribution investissement: Production 35\% (USD 85.75M), Géologie Exploration 20\% (USD 49M), IT Transformation digitale 15\% (USD 36.75M), RH Capital humain 12\% (USD 29.4M), Environnement ESG compliance 10\% (USD 24.5M), Autres initiatives 8\% (USD 19.6M). Financement sources: Cashflow operationnel 40\% (USD 98M), Endettement bancaire 35\% (USD 85.75M @ 6.5\% intérêt), Equity capital 25\% (USD 61.25M shareholder). Debt management: amortissement 5 ans (2025-2030), covenant leverage ratio <3x, interest coverage >2.5x, credit facility USD 100M revolving. Budget allocation annuel: 2024 USD 12M, 2025 USD 42M, 2026 USD 48M, 2027 USD 45M, 2028 USD 38M, 2029 USD 35M, 2030 USD 25M sustainment capex. ROI metrics: payback period 3.2 years, profitability index 2.4x, IRR internal rate 34\% annuel, NPV USD 780M (8\% discount). Cash flow projection: positive 2027 onwards, cumulative USD 550M 2030, sufficient debt servicing coverage margins. Risk mitigation: sensitivity analysis commodity prices ±15\%, cost inflation ±8\%, production ±10\% impact valuation USD ±150M range.
+&
+\small
+Strategic financial plan 7-year horizon (USD 245M total capex allocation). Investment distribution: Production mining 35\% (USD 85.75M capex), Geology Exploration 20\% (USD 49M drilling seismic), IT digital transformation 15\% (USD 36.75M technology), HR human capital 12\% (USD 29.4M recruitment training), Environment ESG compliance 10\% (USD 24.5M sustainability), Other initiatives 8\% (USD 19.6M contingency). Financing sources structure: Operational cashflow 40\% (USD 98M generation), Bank borrowings 35\% (USD 85.75M @ 6.5\% interest rates), Equity capital 25\% (USD 61.25M shareholder injection). Debt management protocols: amortization schedule 5 years (2025-2030), covenant leverage ratio <3x maintenance, interest coverage >2.5x requirement, credit facility USD 100M revolving availability. Annual budget allocation: 2024 USD 12M, 2025 USD 42M, 2026 USD 48M, 2027 USD 45M, 2028 USD 38M, 2029 USD 35M, 2030 USD 25M sustainment capex. Return on investment metrics: payback period 3.2-year realization, profitability index 2.4x multiple, internal rate return 34\% annually, NPV USD 780M (8\% discount rate). Cash flow projection trajectory: positive generation 2027 onwards, cumulative USD 550M 2030 realization, sufficient debt servicing coverage margin maintained. Risk mitigation frameworks: sensitivity analysis commodity prices ±15\% impact, cost inflation ±8\% exposure, production ±10\% variance impact valuation USD ±150M range brackets.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/05_recommandations_finances.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 17: Sécurité & Santé
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 17. Securite \& Sante}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Programme intégré sécurité zero-accident operationale 2024-2030. TRIFR reduction trajectory: 4.8 (2024) declining 0.8 (2030), representing -83\% reduction risk total recordable incident frequency. Incidents graves reduction: 12 incidents annually (2024) declining 1 incident (2030), -92\% improvement severity. Jours sans accident cumulative: 324 days (2024) expanding 2,500+ days (2030), 8x improvement culture zero-accident. Budget allocation: USD 1.2M (2024) expanding USD 2.4M/annually (2030), cumulative USD 12.5M 7-year program. Initiatives sécurité: Audit comprehensive Q1 2025 (internal safety assessment), ISO 45001 certification Q4 2025 (international standards conformance), formation 1,200 safety training courses annually, equipment PPE USD 2.8M new protective equipment procurement. Prevention strategy: leadership zero-tolerance incidents culture development, safety committees departmental monthly meetings, hazard identification HIRA analysis processes, near-miss reporting incentive programs rewards. Performance metrics: incident investigation 24-hour root cause analysis, corrective action implementation 72-hour SLA, performance tracking KPI dashboards real-time, benchmarking industry best practices mining sector. Risk assessment: high-risk activities mining equipment operation prioritized, underground mining deeper depths 2027-2030 enhanced protocols, contractor safety oversight third-party assurance, emergency response protocols simulation drills quarterly exercies.
+&
+\small
+Integrated zero-accident operational safety program 2024-2030. TRIFR reduction trajectory: 4.8 (2024) declining 0.8 (2030), representing -83\% total recordable incident frequency rate reduction achievement. Serious incidents reduction: 12 incidents annually (2024) declining 1 incident (2030), -92\% severity improvement trajectory. Cumulative accident-free days: 324 days (2024) expanding 2,500+ days (2030), representing 8x cultural improvement zero-accident realization. Budget allocation strategic: USD 1.2M (2024) expanding USD 2.4M/annually (2030), cumulative USD 12.5M 7-year program investment. Safety initiatives programs: Comprehensive safety audit Q1 2025 (internal assessment completion), ISO 45001 certification achievement Q4 2025 (international standards compliance), safety training 1,200 courses annually conducted, PPE protective equipment USD 2.8M new procurement. Prevention strategic approach: leadership zero-tolerance incident culture development embedded, safety committees departmental monthly meetings convened, hazard identification HIRA analysis processes systematic, near-miss reporting incentive program rewards recognition. Performance measurement frameworks: incident investigation 24-hour root cause analysis completion, corrective action implementation 72-hour SLA enforcement, performance tracking KPI dashboards real-time visibility, industry best practice benchmarking mining sector leader. Risk assessment protocols: high-risk mining activities equipment operation prioritized focus, underground mining deeper access 2027-2030 enhanced safety protocols, contractor safety oversight third-party assurance engagement, emergency response protocols quarterly simulation drills exercised.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/06_recommandations_securite.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 18: Environnement & Durabilité
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 18. Environnement \& Durabilite}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Stratégie ESG ambitieuse 2024-2030 intégrant carbon neutrality, water stewardship, biodiversity. Emissions CO2 reduction: 46\% absolute reduction 2030 targets, renewable energy 65\% operations (solar 35MW, wind 20MW, hydro 15MW), clean energy transition phased. Water sustainability: 32\% reduction consumption rates, recycling 95\% water closed-loop systems, zero discharge mining operations compliance, watershed protection community initiatives. Waste management circular: 75\% recyclage waste streams, zero landfill targets by 2030, tailings management innovation, mine closure planning early stage. Biodiversity initiatives: 15,000 trees planted forest restoration programmes, 678 hectares habitat creation conservation, wildlife corridor protection initiatives, environmental impact monitoring systems. Corporate social responsibility: USD 5.2M communautes annual investment, local employment 80\% recruitment RDC nationals, education scholarships 500 students annually, infrastructure community water wells healthcare clinics. Carbon negative pathway: 2028 carbon neutrality achievement (Scope 1+2), 2030 carbon negative operations (renewable energy offset plus), climate adaptation resilience planning. Governance ESG: board-level sustainability committee oversight, third-party assurance GRI standards reporting, stakeholder consultation mining communities engaged, science-based targets SBTi validation. Investment capex ESG: USD 24.5M renewable energy infrastructure, USD 8.2M water treatment systems, USD 5.8M conservation programmes, USD 3.5M monitoring systems technology. Impact metrics: carbon footprint reduction 46\%, water negative cycle 2030, biodiversity +5\% annually, community satisfaction NPS 75+, regulatory compliance 100\% achievement.
+&
+\small
+Ambitious ESG strategy 2024-2030 integrating carbon neutrality, water stewardship, biodiversity conservation. CO2 emissions reduction trajectory: 46\% absolute reduction 2030 target achievement, renewable energy 65\% operations scaling (solar 35MW capacity, wind 20MW capacity, hydro 15MW capacity), clean energy transition phased deployment. Water sustainability approach: 32\% consumption reduction rates achievement, recycling 95\% water closed-loop system implementation, zero discharge mining operations compliance standards, watershed protection community partnership initiatives. Waste management circular economy: 75\% waste streams recycling achievement, zero landfill targets 2030 implementation, tailings management innovative processes, mine closure planning early-stage assessment. Biodiversity conservation initiatives: 15,000 trees forest restoration programme planting, 678 hectares habitat creation conservation areas, wildlife corridor protection initiatives establishment, environmental impact monitoring real-time systems. Corporate social responsibility programmes: USD 5.2M annual community investment allocation, local employment 80\% recruitment RDC national prioritization, education scholarships 500 students annually support, infrastructure community water wells healthcare clinic provision. Carbon negative pathway realization: 2028 carbon neutrality achievement (Scope 1+2 emissions), 2030 carbon negative operations (renewable energy offset beyond), climate adaptation resilience planning preparedness. ESG governance framework: board-level sustainability committee oversight accountability, third-party assurance GRI standards reporting verification, stakeholder consultation mining communities engaged, science-based targets SBTi validation alignment. Capex investment ESG initiatives: USD 24.5M renewable energy infrastructure, USD 8.2M water treatment systems, USD 5.8M conservation programmes, USD 3.5M monitoring systems technology. Impact key metrics: carbon footprint -46\% reduction, water negative cycle 2030, biodiversity +5\% annually growth, community satisfaction NPS 75+, regulatory compliance 100\% achievement standards.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/11_environnement_conformite.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 19: Gisements Geologie
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 19. Gisements Geologie}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Modèles gisements géologiques 6 principaux avec caractérisation 3D complète. Gisement 1 (Nord): 92 Mt reserves proven, 0.98\% Cu grade, 380m depth median, configuration stratiform thick ore body. Gisement 2 (Central): 85 Mt reserves, 1.05\% Cu grade, 520m depth, dipping moderate 25 degrees. Gisement 3 (Sud): 68 Mt reserves, 0.92\% Cu grade, 450m depth, stockwork disseminated. Gisement 4 (Est): 48 Mt reserves, 1.15\% Cu grade, 600m depth, narrow high-grade vein. Gisement 5 (Ouest): 52 Mt reserves, 0.88\% Cu grade, 380m depth, porphyry disseminated. Gisement 6 (Profond): 40 Mt reserves, 1.25\% Cu grade, 750m depth, newly discovered UG potential. Integration modèles géologie: données forage 12,000 holes intersection analysis, sismique 3D 2,500 km ligne interpretée, metallurgical test recovery rates ore processing characterization. Configuration spatiale: grid mapping kriging estimation resource classification, uncertainty quantification Monte-Carlo simulation ranges, geochemical signatures vector targeting future exploration. Production scheduling: mine plan optimization sequencing pit designs, reserve extraction priority scheduling phased, tonnage profile production crescendo growth. Impact économique: 245 Mt baseline reserves 385 Mt (2030) growth (+57\%), teneur moyenne 0.95\% vers 1.15\% enrich (+21\%), coût mining -49\% reduction économies scale.
+&
+\small
+Geological deposit models 6 principal with complete 3D characterization assessment. Deposit 1 (North): 92 Mt proven reserves, 0.98\% Cu grade concentration, 380m depth median, stratiform configuration thick ore body. Deposit 2 (Central): 85 Mt reserves allocation, 1.05\% Cu grade, 520m depth, moderate dipping 25 degrees orientation. Deposit 3 (South): 68 Mt reserve estimates, 0.92\% Cu grade, 450m depth, stockwork disseminated style. Deposit 4 (East): 48 Mt reserves discovered, 1.15\% Cu grade, 600m depth, narrow high-grade vein deposit. Deposit 5 (West): 52 Mt reserves identified, 0.88\% Cu grade, 380m depth, porphyry disseminated mineralization. Deposit 6 (Deep): 40 Mt reserves newly discovered, 1.25\% Cu grade, 750m depth, underground mining future potential. Geological models integration: drilling data 12,000 hole intersections analysis, 3D seismic 2,500 km line interpreted, metallurgical testing recovery rates ore processing characterization. Spatial configuration: grid mapping kriging estimation resource classification method, uncertainty quantification Monte-Carlo simulation ranges, geochemical signatures vector targeting future exploration potential. Production scheduling optimization: mine plan pit designs sequencing optimization, reserve extraction priority phased scheduling, tonnage profile production crescendo growth trajectory. Economic impact realization: 245 Mt baseline reserves advancing 385 Mt (2030) growth (+57\%), average grade 0.95\% advancing 1.15\% enrichment (+21\%), mining cost -49\% reduction economies scale achievement.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/11_geologie_gisements.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 20: Maintenance Équipements
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 20. Maintenance Equipements}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Programme maintenance préventive et prédictive parc minier mining 2024-2030. Parc équipements: 45 excavators pelles mining fleet, 120 haul trucks camions transport minerai, 35 drilling rigs foreuses, 8 compresseurs air. Strategy maintenance: Preventif inspection mensuelle critical equipment, service trimestriel routine maintenance, overhaul annuel major component refurbishment. Maintenance prédictive: sensors IoT deployed equipment monitoring real-time, AI anomaly detection algorithms predictive, spare parts optimization inventory management. Budget allocation: USD 6.2M cumulative (2024-2030), equipment downtime <5\% target, availability 95\%+ realization. Maintenance protocols: equipment tagging CMMS maintenance system, vendor SLA performance contracts penalties, spare parts stock localized remote facilities, technician training 800 personnel annually skill development. Preventive schedules: excavators 500 hour service intervals, trucks 1,000 hour overhaul cycles, drills 800 hour maintenance check, compressors 400 hour service requirement. Predictive analytics: vibration monitoring bearing health assessment, fluid analysis contamination detection, thermography temperature anomaly detection, ultrasonic inspection lubrication condition. Replacement strategy: equipment life extension 10-12 years vs industry 8-10 years through optimization, strategic refresh 5-year CAPEX budgeting phased, rebuild remanufacturing vs replacement economics. Impact operationnal: production continuity minimal disruption downtime, cost reduction deferred equipment replacement, safety improved reliability equipment performance, environmental emissions control preventive maintenance.
+&
+\small
+Preventive and predictive maintenance program mining equipment fleet 2024-2030. Equipment fleet inventory: 45 excavator pelles mining operations, 120 haul trucks ore transport, 35 drilling rigs exploration extraction, 8 compressor air units. Maintenance strategic approach: Preventive monthly inspection critical equipment critical, quarterly routine maintenance service cycles, annual major component refurbishment overhaul. Predictive maintenance advanced: IoT sensors deployed equipment monitoring real-time data, AI anomaly detection algorithms predictive failure forecasting, inventory spare parts optimization management logistics. Budget allocation strategic: USD 6.2M cumulative (2024-2030 period), equipment downtime <5\% target achievement, availability 95\%+ realization performance. Maintenance operational protocols: CMMS equipment tagging maintenance management system, vendor SLA performance contract enforcement penalties, spare parts stock localized remote facility positioning, technician training 800 personnel annually skill development. Preventive maintenance schedules: excavators 500-hour service intervals, trucks 1,000-hour overhaul cycles, drills 800-hour maintenance check, compressors 400-hour service requirements. Predictive analytics capabilities: vibration monitoring bearing health assessment real-time, fluid analysis oil contamination detection algorithms, thermography temperature anomaly detection infrared, ultrasonic inspection lubrication condition ultrasonic. Equipment replacement strategy: equipment life extension 10-12 years vs industry 8-10 years optimization achievement, strategic refresh 5-year CAPEX budgeting phased planning, rebuild remanufacturing alternative vs replacement cost-benefit analysis. Operational impact realization: production continuity minimal disruption downtime achievement, cost reduction deferred equipment replacement capex, safety improved equipment reliability performance, environmental emissions control preventive maintenance excellence.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/12_maintenance_equipements.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 21: Predictions 5 Ans Premium
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 21. Predictions 5 Ans Premium}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Predictions operationnelles detaillées 2025-2030 avec stress testing sensitivity analysis. Production trajectory: 45.2 Mt (2024) croissance 72 Mt (2030), CAGR 8.7\% annuel. Revenue projections: USD 890M (2024) advancing USD 1,410M (2030), croissance 58\%, premium pricing +2\%. Cost structure evolution: USD 2.45/tonne ore (2024) declining USD 1.25/tonne ore (2030), -49\% reduction. Profitability progression: 18\% margin (2024) advancing 38\% margin (2030), +20pp expansion drivers. Cash flow forecasting: operational cashflow USD 85M (2024) advancing USD 310M (2030), cumulative USD 1,250M 7-year period. Debt servicing: annual debt obligation USD 8M (2024) advancing USD 5M (2030), coverage ratio >2.5x maintained. Stress testing scenarios: commodity price -15\% impact (USD 210M revenue loss), cost inflation +8\% (USD 80M impact), production -10\% (USD 150M revenue impact), combined worst-case USD 300M downside risk. Sensibilité analysis: production ±10\% elasticity ±15\% EBITDA, price ±15\% elasticity ±22\% profitability, cost ±8\% elasticity ±12\% margins. Monte-Carlo simulations: 10,000 iterations confidence interval ranges, percentile 10th downside risk USD 450M (pessimistic), percentile 90th upside USD 1,200M (optimistic). Decision rules: breakeven commodity price USD 1.10/lb copper, minimum EBITDA margin 25\%, maximum debt/EBITDA 3.0x. Contingency planning: price hedging 30\% production, cost reduction programs 5\% achievable, production deferrals 20% flexibility.
+&
+\small
+Detailed operational forecasts 2025-2030 with stress testing sensitivity analysis frameworks. Production trajectory modeling: 45.2 Mt (2024) growth advancing 72 Mt (2030), CAGR 8.7\% annually. Revenue projections detailed: USD 890M (2024) advancing USD 1,410M (2030), 58\% growth realization, premium pricing +2\% implementation. Cost structure evolution dynamics: USD 2.45/tonne ore (2024) declining USD 1.25/tonne ore (2030), -49\% reduction achievement. Profitability progression trajectory: 18\% operating margin (2024) advancing 38\% margin (2030), +20 percentage point expansion drivers integrated. Cash flow forecasting projections: operational cashflow USD 85M (2024) advancing USD 310M (2030), cumulative USD 1,250M 7-year period realization. Debt servicing assessment: annual debt obligation USD 8M (2024) advancing USD 5M (2030), coverage ratio >2.5x requirement maintained. Stress testing scenarios comprehensive: commodity price -15\% impact (USD 210M revenue loss), cost inflation +8\% (USD 80M impact), production -10\% (USD 150M revenue impact), combined worst-case USD 300M downside risk exposure. Sensitivity analysis detailed: production ±10\% elasticity ±15\% EBITDA impact, price ±15\% elasticity ±22\% profitability sensitivity, cost ±8\% elasticity ±12\% margin sensitivity. Monte-Carlo simulation results: 10,000 iterations confidence interval ranges computed, percentile 10th downside risk USD 450M (pessimistic scenario), percentile 90th upside USD 1,200M (optimistic scenario). Decision rules framework: breakeven commodity price USD 1.10/lb copper threshold, minimum EBITDA margin 25\% requirement, maximum debt/EBITDA 3.0x ratio covenant. Contingency planning protocols: price hedging 30\% production insurance, cost reduction programs 5\% achievable targets, production deferrals 20\% flexibility option available.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/12_predictions_5ans_premium.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 22: Infrastructure IT
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 22. Infrastructure IT}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Transformation numérique integrale infrastructure IT 2024-2030 (USD 36.8M capex). Data center infrastructure: USD 8.5M enterprise-grade redundancy, N+1 failover systems uptime 99.9\%, backup power generation UPS diesel. Network connectivity: 600\% bandwidth upgrade expansion, fiber optic backbone SAP transmission, remote site connectivity SD-WAN software-defined networking. Cybersecurity comprehensive: USD 4.2M endpoint protection, intrusion detection systems IDS/IPS, data encryption AES-256 protocols, access control IAM identity management. Cloud infrastructure: USD 6.3M Azure AWS hybrid cloud deployment, scalability elasticity on-demand, disaster recovery geographic redundancy DRC. Enterprise systems: SAP ERP USD 9.2M implementation 2025-2026, supply chain procurement ABAP modules, financial accounting reporting consolidation. Analytics platform: USD 3.8M BI business intelligence Tableau Power BI deployment, real-time dashboards executive KPIs, predictive analytics machine learning models. Mobile applications: USD 2.1M native iOS Android apps development, field workforce mobile access, equipment telemetry sensors IoT integration. Data infrastructure: 500GB data lake setup cloud-native Databricks Spark, structured unstructured data integration, data governance stewardship policies. Staff enablement: 800 users training IT literacy programs, consultant engagement 45 IT staff hiring, offshore nearshore development augmentation. Implementation governance: monthly steering committee oversight, phase-gate delivery Agile scrum sprints, change management training communication. Benefits realization: operational efficiency +35\%, decision speed +50\%, error reduction -80\%, employee productivity +25\%.
+&
+\small
+Comprehensive digital transformation IT infrastructure 2024-2030 (USD 36.8M capex allocation). Enterprise data center infrastructure: USD 8.5M enterprise-grade redundancy architecture, N+1 failover systems uptime 99.9\%, backup power generation UPS diesel backup. Network connectivity enhancement: 600\% bandwidth upgrade expansion capacity, fiber optic backbone SAP transmission infrastructure, remote site connectivity SD-WAN software-defined networking. Cybersecurity comprehensive program: USD 4.2M endpoint protection deployment, intrusion detection IDS/IPS systems, data encryption AES-256 protocols, access control IAM identity management systems. Cloud infrastructure modernization: USD 6.3M Azure AWS hybrid cloud deployment strategy, scalability elasticity on-demand capacity, disaster recovery geographic redundancy DRC implementation. Enterprise systems implementation: SAP ERP USD 9.2M 2025-2026 implementation timeline, supply chain procurement ABAP modules, financial accounting reporting consolidation systems. Analytics platform deployment: USD 3.8M BI business intelligence Tableau Power BI, real-time dashboards executive KPI visibility, predictive analytics machine learning algorithms. Mobile applications development: USD 2.1M native iOS Android apps creation, field workforce mobile access capabilities, equipment telemetry sensors IoT integration systems. Data infrastructure foundation: 500GB data lake setup cloud-native Databricks Spark, structured unstructured data integration capabilit, data governance stewardship policies establishment. Staff enablement programs: 800 users training IT literacy development, consultant engagement 45 IT staff hiring recruitment, offshore nearshore development augmentation sourcing. Implementation governance framework: monthly steering committee oversight accountability, phase-gate delivery Agile scrum sprint methodology, change management training communication engagement. Realization benefits quantified: operational efficiency +35\%, decision speed +50\%, error reduction -80\%, employee productivity +25\% improvement.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/13_informatique_infrastructure.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 23: Direction Stratégie KPIs
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 23. Direction Strategie KPIs}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Gouvernance executive structure et stratégie 2024-2030. Management executive: CEO president stratégie globale, COO operations chief mining production, CFO finance budgets investments, CTO technology systems infrastructure, CHRO human resources talent, CMO commercial markets stakeholders, Counsel legal governance compliance. Board committees: Finance committee quarterly budgets approvals, Audit committee risk controls assurance, ESG committee sustainability compliance, Strategy committee vision roadmap planning. Leadership capabilities: MBA degrees executive team 85\%, mining industry experience 20+ years average, international exposure 3+ regions, change management expertise certified. KPIs tracking principal (24 metrics): Production volume tonnes produced, Cost per tonne ore COGS, Cash flow libre operationnel, ROI return investment cumulative, EBITDA earnings, Safety TRIFR incident rate, Environment CO2 emissions, Employee NPS satisfaction. Sub-metrics secondary (12 metrics): Equipment availability uptime, Grade ore teneur metal, Headcount hiring retention, Supplier on-time delivery, Project schedule variance, Budget actual spending. Reporting cadence: Daily dashboard real-time operational metrics, Weekly management meetings performance reviews, Monthly board reporting financial performance, Quarterly stakeholder communications external. Decision governance: CEO authority investments <USD 2M, Board approval >USD 2M, Committee recommendations technical, Consensus seeking major decisions strategic. Risk oversight: Enterprise risk management framework quarterly review, Risk register 45 identified risks tracked, Mitigation strategies implemented monitored, Board escalation critical risks >USD 10M exposure. Strategic alignment: 5-year vision 2030 realization targets, Annual objectives cascaded departments, Quarterly reviews progress tracking adjustments, Compensation incentives performance-based metrics.
+&
+\small
+Executive governance structure and strategy 2024-2030. Management team composition: CEO strategic direction presidency, COO chief operations mining production, CFO financial budgets capital allocation, CTO technology systems infrastructure, CHRO human resources talent management, CMO commercial markets stakeholder relations, Counsel legal compliance governance. Board committee structure: Finance committee quarterly budget approvals, Audit committee risk controls assurance, ESG committee sustainability compliance, Strategy committee vision roadmap planning. Leadership capability development: MBA degrees executive team 85\%, mining industry experience 20+ years average, international exposure 3+ geographic regions, change management expertise certified professional. KPIs tracking principal (24 metrics): Production volume tonnes output, Cost per tonne ore COGS, Free cash flow operational, ROI return investment cumulative, EBITDA earnings indicator, Safety TRIFR incident frequency, Environment CO2 emissions, Employee NPS satisfaction. Sub-metrics secondary (12 metrics): Equipment availability uptime, Ore grade teneur metal, Headcount hiring retention, Supplier on-time delivery, Project schedule variance tracking, Budget actual spending. Reporting cadence frequency: Daily dashboard real-time operational, Weekly management meetings performance, Monthly board financial reporting, Quarterly stakeholder external communications. Decision governance authority: CEO approval investments <USD 2M, Board approval >USD 2M threshold, Committee recommendations technical, Consensus seeking major strategic decisions. Risk oversight protocols: Enterprise risk management quarterly review, Risk register 45 identified risks tracking, Mitigation strategies implementation monitoring, Board escalation critical risks >USD 10M. Strategic alignment integration: 5-year vision 2030 targets realization, Annual objectives cascaded departments, Quarterly progress reviews adjustments, Compensation performance-based incentive metrics.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/14_direction_strategie_kpis.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 24: Executive Dashboard
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 24. Executive Dashboard}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Tableau de bord executive temps réel intégrant 24 metrics principales avec 12 sous-métriques. Production metrics: volume tonnes daily YTD vs budget forecast trend, grade teneur concentration, recovery récupération rates actual target. Financials section: revenue monthly cumulative vs target, EBITDA profitability margin %, cash flow libre operationnel, capex spending vs plan. Operations domain: TRIFR safety rate incidents, equipment availability uptime %, cost per tonne ore baseline actual. Human resources: headcount total FTE, turnover attrition rate %, NPS employee satisfaction score, training hours invested per employee. Environment: CO2 emissions tonnes, water consumption m3, waste recyclage percentage, energy renewable % total. Performance indicators: trend indicators up/down direction, variance alerts red/yellow/green status, benchmarking peer comparison industry, forecast projection monthly forward. Data sources: SAP ERP system feeds real-time, equipment sensors IoT telemetry, HR systems payroll timekeeping, environmental monitoring systems automated. Display platforms: Desktop browser Tableau Power BI dashboards, Mobile app iOS Android access, Conference room displays large screens 65 inch, Automated alerts anomalies via email SMS. Update frequency: Production metrics hourly refresh, Financial daily consolidation, HR weekly updates, Environmental real-time streaming. Access controls: Role-based permissions executive dashboard, Data security encryption transit rest, Audit logging all user access changes, Backup redundancy disaster recovery.
+&
+\small
+Real-time executive dashboard integrating 24 principal metrics with 12 sub-metrics visibility. Production metrics section: volume tonnes daily YTD vs budget forecast trend analysis, grade teneur concentration levels, recovery recuperation rates actual vs target. Financials domain: revenue monthly cumulative achievement, EBITDA profitability margin percentage, free cash flow operationally, capex spending variance plan. Operations metrics: TRIFR safety incident rate, equipment availability uptime percentages, cost per tonne ore actual baseline. Human resources section: headcount total FTE count, turnover attrition percentage rate, NPS employee satisfaction score, training hours per employee investment. Environmental indicators: CO2 emissions tonnes, water consumption cubic meters, waste recyclage percentage, energy renewable percentage total. Performance analytics: trend indicators directional up/down, variance alerts status red/yellow/green, industry benchmarking peer comparison, forecast projection monthly forward. System data sources: SAP ERP real-time feeds, equipment sensors IoT telemetry, HR systems payroll timekeeping, environmental monitoring automated systems. Display platform delivery: desktop Tableau Power BI dashboards, mobile iOS Android application access, conference room 65-inch large displays, automated anomaly alerts email SMS. Metric update frequency: Production hourly refresh, Financial daily consolidation, HR weekly updates, Environmental real-time streaming. Access control security: role-based permissions, data encryption transit/rest, audit logging access, backup redundancy recovery.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/15_executive_dashboard.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 25: Security Environment Analysis
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 25. Security \& Environment Analysis}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Analyse intégrée sécurité operationnelle et environnement 2024-2030 avec corrélations causales. Safety domain: TRIFR rate trajectory 4.8 declining 0.8 (-83\%), incidents graves 12 declining 1 (-92\%), near-miss reports increasing indicator proactive culture, investigation 24h completion SLA, corrective action 72h enforcement. Environnement metrics: emissions CO2 tonnes 46\% reduction, water consumption 32\% reduction, waste recyclage 75\%, biodiversity habitat 678 hectares. Correlations causales: safety training investment USD 2.5M/year positive correlation TRIFR reduction, equipment maintenance spending positive correlation availability uptime, workforce retention positive correlation safety culture maturity. Compliance framework: ISO 45001 safety management 2025 certification target, ISO 14001 environmental 2025 target, regulatory reporting quarterly compliance, community consultation monthly engagement. Risk drivers identified: high-risk activities equipment operation top priority, geological hazards deep mining underground, environmental contamination water tailings, stakeholder reputation community perception. Mitigation strategies integrated: prevention training 1,200 courses annual, equipment modernization USD 6.2M 7-year, renewable energy 65\% transition 2030, community CSR programs USD 5.2M annual. Impact measurement: safety incidents trending downward continuous, environmental compliance 100\% regulatory adherence, community satisfaction NPS 75+ target, insurance premiums reducing based improvement. Governance integration: board-level committee oversight safety environment combined, monthly steering committee reviews performance, real-time dashboards alerts anomalies, external audit third-party assurance annually.
+&
+\small
+Integrated operational safety and environment analysis 2024-2030 with causal correlations. Safety domain metrics: TRIFR rate trajectory 4.8 declining 0.8 (-83\%), serious incidents 12 declining 1 (-92\%), near-miss reports increasing proactive culture indicator, 24-hour investigation SLA completion, 72-hour corrective action enforcement. Environment metrics: CO2 emissions 46\% reduction trajectory, water consumption 32\% reduction achievement, waste recyclage 75\% circular economy, biodiversity habitat 678 hectares creation. Causal correlations analysis: safety training investment USD 2.5M/year positive TRIFR, equipment maintenance spending positive uptime, workforce retention positive safety culture. Compliance framework structure: ISO 45001 safety management 2025 certification, ISO 14001 environmental 2025 target, quarterly regulatory reporting, monthly community consultation. Risk drivers identified: high-risk equipment operations priority, geological deep mining hazards, environmental water/tailings contamination, stakeholder reputation perception. Mitigation strategies integrated: prevention training 1,200 courses annual, equipment modernization USD 6.2M 7-year, renewable energy 65\%, community CSR USD 5.2M annual. Impact measurement systems: safety incidents trending downward continuous, environmental 100\% compliance adherence, community NPS 75+, insurance premiums reducing. Governance integration: board-level safety/environment committee, monthly steering reviews, real-time dashboards alerts, external audit assurance.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/security_environment_analysis.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 26: Comprehensive Analysis
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 26. Comprehensive Analysis}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Analyse comprehensive intégrée tous domaines avec correlations causales bidirectionnelles. Production-finances correlation: volume production +59\% multiplied price baseline +2\% premium = revenue +61\% growth USD 520M annual 2030, profit impact +USD 200M margin expansion. IT-operations synergy: system efficiency +35\% reduces cost per tonne, automation reduces labor 12\%, uptime 95\% supports production continuity, predictive maintenance decreases downtime 50\%. HR-safety integration: training investment 1,200 courses annual decreases TRIFR 83\%, retention improvement 22% to 8\% reduces hiring costs USD 2.5M annually, productivity improvement +15\% supports production growth. Environment-finance trade-off analysis: ESG compliance capital USD 24.5M renewable energy, carbon offset revenue streams USD 1.5M annually 2030, premium pricing acceptance +2\% due sustainability reputation, reduced penalties zero environmental violations. Exploration-production dependency: reserve confirmation enables production planning confidence, quality of geology models reduces mining cost -49\%, teneur improvement +21\% increases profitability directly. Critical path analysis: geologie delays impact production timing (-3 months geologie = -6 months production defer), IT delays impact efficiency gains (-6 months SAP = -4\% efficiency loss), RH recruitment impacts production capacity (+15\% technical staff = +8\% production). Risk correlation network: commodity price decline affects finance stress tests, equipment failures impact safety incidents 40\% correlation, cost inflation affects profitability margin squeeze. Sensitivity matrix (3x3): production ±10\%, price ±15\%, cost ±8\% impact ranges NPV USD 450M-1,200M. Value drivers ranked: production volume 35\%, cost reduction 25\%, price premium 20\%, financial structure 20\%.
+&
+\small
+Comprehensive analysis integrating all domains with bidirectional causal correlations. Production-finance correlation: volume production +59\% multiplied price premium +2\% = revenue +61\% growth USD 520M annually 2030, profit impact +USD 200M expansion. IT-operations synergy: system efficiency +35\% cost reduction, automation labor -12\%, 95\% uptime production continuity, predictive maintenance downtime -50\%. HR-safety integration: training 1,200 courses TRIFR -83\%, retention 22% to 8\% hiring cost -USD 2.5M, productivity +15\% production. Environment-finance: ESG capex USD 24.5M renewable, carbon offset USD 1.5M, sustainability premium +2\%, penalty reduction environmental compliance. Exploration-production dependency: reserve confirmation planning, geology cost -49\%, grade +21\% profitability. Critical path analysis: geology delays -3m impact production -6m, IT delays -6m SAP impact efficiency -4\%, HR recruitment +15\% technical = +8\% production. Risk correlation: price decline finance stress, equipment failure safety 40\% correlation, cost inflation margin squeeze. Sensitivity matrix: production ±10\%, price ±15\%, cost ±8\% NPV USD 450M-1,200M range. Value drivers: production volume 35\%, cost reduction 25\%, price premium 20\%, finance 20\%.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/comprehensive_analysis.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% GRAPHIQUE 27: Security Detailed Analysis
+% ============================================================================
+\section*{\textcolor{darkblue}{\Large 27. Security Detailed Analysis}}
+
+\vspace{0.2cm}
+
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textcolor{darkblue}{\textbf{\small FR}} & \textcolor{darkblue}{\textbf{\small EN}} \\
+\hline
+\small
+Programme sécurité integré operational complet 2024-2030. Prevention strategy: 1,200 formations annually distributed workforce, 120 heures par employee annual training mandate, specialized training equipment hazmat dangerous goods, supervisor certifications 500 managers annually, apprenticeships 200 junior staff mentorship. Equipment PPE protective: USD 2.8M procurement nuevo protective equipment, helmet harness respirator safety glasses, 100\% workforce coverage replacement 12 mois cyclique, inspection pre-shift daily, maintenance cleaning disinfection. Audits program multiples: mensuels internal audits departmental, trimestriel external audits certification bodies, annuels certifications ISO 45001 compliance renewal, near-miss reviews weekly safety committee, serious incident investigations 24 heures root cause analysis. Leadership commitment culture: zero-tolerance policy incidents violations strict, bonus accident-free achievements USD 2,500/month safety leaders, near-miss reward programs incentive USD 1,000 submission, psychological safety reporting encouraged transparent, executive walkabouts monthly site visits engagement. Performance metrics targets: TRIFR rate 0.8 goal (vs 4.8 baseline), lost-time incidents 0 target, near-miss reports 500+ annually indicator, safety committee meetings monthly compliance, training compliance 100\% coverage verification. Behavioral change programmes: safety culture coaching leaders managers, peer-to-peer accountability teams, observation reporting systems 360 feedback, coaching mentoring experienced safety champions. Technology enhancement: hazard identification mobile app reporting, wearable sensors real-time biometric monitoring, video incident analysis root cause investigation, CCTV surveillance high-risk areas monitoring. Community safety: contractor safety requirements prequalification, community injury reporting near-site, emergency response drills quarterly, medical facilities clinic on-site capability, evacuation procedures community communication.
+&
+\small
+Integrated comprehensive operational safety program 2024-2030. Prevention strategy implementation: 1,200 training courses annually workforce distributed, 120 hours per employee annual training mandate enforcement, specialized training equipment hazmat dangerous goods, supervisor certifications 500 managers annual achievement, apprenticeships 200 junior staff mentorship development. Personal protective equipment PPE: USD 2.8M procurement new equipment investment, helmet harness respirator safety eyewear, 100\% workforce coverage 12-month replacement cyclical, pre-shift inspection daily protocol, maintenance cleaning disinfection routine. Multi-program audits: internal monthly audits departmental, quarterly external audits certification, annual ISO 45001 compliance certification renewal, weekly near-miss reviews, 24-hour serious incident investigation root cause. Leadership commitment culture: zero-tolerance incident policy strict enforcement, accident-free bonus achievement USD 2,500/month, near-miss reward programs USD 1,000 submission, psychological safety reporting encouragement, executive walkabouts monthly site visits. Performance metric targets: TRIFR 0.8 goal (vs baseline 4.8), lost-time incidents zero target, near-miss reports 500+ annually indicator, monthly safety committee, 100\% training compliance. Behavioral change programs: safety culture coaching leaders, peer-to-peer accountability team dynamics, observation reporting 360 feedback systems, coaching mentoring safety champions. Technology enhancement: mobile app hazard reporting, wearable sensors biometric monitoring, incident video analysis investigation, CCTV surveillance high-risk areas. Community safety: contractor prequalification requirements, near-site reporting systems, quarterly emergency drills, on-site medical clinic, evacuation procedures communication.
+\\
+\hline
+\end{tabularx}
+
+\vspace{0.4cm}
+
+\begin{center}
+    \includegraphics[width=\chartwidth,height=\chartheight,keepaspectratio]{reports/charts/03_security_analysis.png}
+\end{center}
+
+\newpage
+
+% ============================================================================
+% PAGE FINALE: CONCLUSION GÉNÉRALE
+% ============================================================================
+\thispagestyle{empty}
+
+\vspace*{0.5cm}
+
+\begin{center}
+    {\color{darkblue}\Huge\textbf{CONCLUSION GENERALE}}\\[0.3cm]
+    {\color{lightblue}\Large VISION FUTURE 2030}
+\end{center}
+
+\vspace{0.8cm}
+
+{\Large\textbf{\textcolor{darkblue}{SYNTHESE STRATEGIQUE GLOBALE}}}
+
+Ce rapport d'analyse strategique presente une vision complete et ambitieuse de transformation de l'operation miniere en Republique Democratique du Congo pour la periode 2024-2030. Basee sur 27 analyses detaillees (28 graphiques integres), 12 tableaux donnees et 100+ recommandations, cette etude demontre potentiel croissance remarquable.
+
+\vspace{0.5cm}
+
+{\Large\textbf{\textcolor{darkblue}{RESULTATS CLES PROJETES}}}
+
+\begin{itemize}
+    \item \textbf{Production:} Hausse 59\% (45.2 Mt vers 72 Mt) via optimisations geologiques et capacites accrues
+    \item \textbf{Revenus:} Croissance 58\% (USD 890M vers USD 1,410M), validant viabilite economique
+    \item \textbf{Emploi:} Creation 7,350 postes (+59\%), benefice economie locale RDC
+    \item \textbf{Profitabilite:} Amelioration 20pp (18\% vers 38\%), renforçant durabilite
+    \item \textbf{ROI:} 589\% cumulatif 2030, justifiant investissements USD 245M sur 7 ans
+    \item \textbf{Environnement:} Reduction CO2 46\%, creation net-positive ecologique, conformite ESG
+\end{itemize}
+
+\vspace{0.6cm}
+
+\begin{center}
+    \textcolor{lightblue}{--- * ---}
+\end{center}
+
+\vspace{0.6cm}
+
+{\Large\textbf{\textcolor{darkblue}{VISION 2030}}}
+
+\vspace{0.3cm}
+
+En 2030, l'operation miniere RDC sera transformee en leader regional de production de cuivre, demontrant excellence operationnelle et responsabilite environnementale exemplaire. Avec 72 Mt produites, USD 1,410M revenus annuels, 19,800 employes, et empreinte carbone net-positive, cette operation servira de modele Afrique subsaharienne en gouvernance miniere responsable.
+
+\vspace{0.8cm}
+
+\begin{center}
+    {\color{darkblue}\small
+        Rapport complet -- Decembre 2025\\
+        Analyse et Production par Yannick Magayane\\
+        {\tiny CC0 -- Donnees 100\% Fictives -- Libre d'utilisation}
+    }
+\end{center}
+
+\end{document}
