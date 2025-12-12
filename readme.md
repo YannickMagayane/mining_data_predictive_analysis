@@ -2,7 +2,7 @@
 
 **✨ Auteur : Yannick Magayane**  
 *👨‍💻 Full Stack Developer (Python, Django, Vue.js, HTMX, CSS, JavaScript) • 📊 Data Scientist • 💼 Consultant BI*  
-📧 yannickmagayane@gmail.com | 📱 +243979068311 | 🐙 [GitHub](https://github.com/YannickMagayane)
+📧 yannickmagayaneyannick@gmail.com | 📱 +243979068311 | 🐙 [GitHub](https://github.com/YannickMagayane)
 
 **📅 Date** : 11 décembre 2025  
 **📜 Licence** : 🆓 **CC0 1.0 (Domaine Public)** - Libre d'utilisation par tous, sans restrictions
@@ -455,7 +455,7 @@ rapport_final_complet.aux          ← Auxiliary LaTeX file
 ## 📞 Support & Contact
 
 **✨ Auteur** : Yannick Magayane
-- 📧 yannickmagayane@gmail.com
+- 📧 yannickmagayaneyannick@gmail.com
 - 📱 +243979068311
 - 💼 👨‍💻 Full Stack Developer (Python, Django, Vue.js, HTMX, CSS, JavaScript)
 - 📊 Data Scientist • BI Consultant
